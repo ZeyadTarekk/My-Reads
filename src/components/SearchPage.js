@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const SearchPage = () => {
-  const [showSearchPage, setShowSearchpage] = useState(false);
-
   return (
     <div className="search-books">
       <div className="search-books-bar">

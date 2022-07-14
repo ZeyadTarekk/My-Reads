@@ -1,4 +1,6 @@
 import "../css/App.css";
+import * as BooksAPI from "../utils/BooksAPI";
+
 import {
   Route,
   Routes,
@@ -9,10 +11,31 @@ import { useState, useEffect } from "react";
 import HomePage from "./HomePage";
 import SearchPage from "./SearchPage";
 function App() {
+  const [allBooks, setAllBooks] = useState([]);
+  useEffect(() => {
+    const getAllBooks = async () => {
+      const res = await BooksAPI.getAll();
+      setAllBooks(res);
+      console.log(res);
+    };
+
+    getAllBooks();
+  }, []);
+
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
+        <Route
+          exact
+          path="/"
+          element={
+            <HomePage
+              currentlyReading={allBooks}
+              wantToRead={allBooks}
+              read={allBooks}
+            />
+          }
+        />
         <Route path="/search" element={<SearchPage />} />
       </Routes>
     </Router>
