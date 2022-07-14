@@ -16,7 +16,6 @@ function App() {
     const getAllBooks = async () => {
       const res = await BooksAPI.getAll();
       setAllBooks(res);
-      console.log(res);
     };
 
     getAllBooks();
@@ -36,7 +35,12 @@ function App() {
             />
           }
         />
-        <Route path="/search" element={<SearchPage />} />
+        <Route
+          path="/search"
+          element={
+            <SearchPage search={BooksAPI.search} currentlyReading={allBooks} />
+          }
+        />
       </Routes>
     </Router>
   );

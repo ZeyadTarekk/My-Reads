@@ -33,7 +33,7 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Want to Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                {props.wantToRead.map((book) => {
+                  {props.wantToRead.map((book) => {
                     return (
                       <li key={book.industryIdentifiers[0].identifier}>
                         <Book
@@ -53,7 +53,7 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                {props.read.map((book) => {
+                  {props.read.map((book) => {
                     return (
                       <li key={book.industryIdentifiers[0].identifier}>
                         <Book

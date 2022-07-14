@@ -22,8 +22,10 @@ const Book = (props) => {
           </select>
         </div>
       </div>
-      <div className="book-title">{props.bookTitle}d</div>
-      <div className="book-authors">{props.bookAuthor.join(", ")}</div>
+      <div className="book-title">{props.bookTitle}</div>
+      <div className="book-authors">
+        {props.bookAuthor && props.bookAuthor.join(", ")}
+      </div>
     </div>
   );
 };
