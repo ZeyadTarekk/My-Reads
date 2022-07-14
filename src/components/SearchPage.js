@@ -47,6 +47,7 @@ const SearchPage = (props) => {
                         backgroundImage={book.imageLinks.thumbnail}
                         bookAuthor={book.authors}
                         bookTitle={book.title}
+                        book={book}
                       />
                     </li>
                   );

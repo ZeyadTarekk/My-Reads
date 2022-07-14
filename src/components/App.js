@@ -4,7 +4,6 @@ import * as BooksAPI from "../utils/BooksAPI";
 import {
   Route,
   Routes,
-  useNavigate,
   BrowserRouter as Router,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -16,6 +15,7 @@ function App() {
     const getAllBooks = async () => {
       const res = await BooksAPI.getAll();
       setAllBooks(res);
+      console.log(res);
     };
 
     getAllBooks();

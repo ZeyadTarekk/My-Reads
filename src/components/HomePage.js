@@ -22,6 +22,7 @@ const HomePage = (props) => {
                           backgroundImage={book.imageLinks.thumbnail}
                           bookAuthor={book.authors}
                           bookTitle={book.title}
+                          book={book}
                         />
                       </li>
                     );
@@ -42,6 +43,7 @@ const HomePage = (props) => {
                           backgroundImage={book.imageLinks.thumbnail}
                           bookAuthor={book.authors}
                           bookTitle={book.title}
+                          book={book}
                         />
                       </li>
                     );
@@ -62,6 +64,7 @@ const HomePage = (props) => {
                           backgroundImage={book.imageLinks.thumbnail}
                           bookAuthor={book.authors}
                           bookTitle={book.title}
+                          book={book}
                         />
                       </li>
                     );
