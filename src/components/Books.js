@@ -1,4 +1,5 @@
 import Book from "./Book";
+import { Link } from "react-router-dom";
 import * as BooksAPI from "../utils/BooksAPI";
 const Books = () => {
   const getContacts = async () => {
@@ -102,9 +103,9 @@ const Books = () => {
             </div>
           </div>
         </div>
-        {/* <div className="open-search">
-          <a onClick={() => setShowSearchpage(!showSearchPage)}>Add a book</a>
-        </div> */}
+        <div className="open-search">
+          <Link to="/search">Add a book</Link>
+        </div>
       </div>
       )
     </div>
