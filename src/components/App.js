@@ -6,13 +6,13 @@ import {
   BrowserRouter as Router,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Books from "./Books";
+import HomePage from "./HomePage";
 import SearchPage from "./SearchPage";
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Books />} />
+        <Route exact path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
       </Routes>
     </Router>

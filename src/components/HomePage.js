@@ -1,7 +1,7 @@
 import Book from "./Book";
 import { Link } from "react-router-dom";
 import * as BooksAPI from "../utils/BooksAPI";
-const Books = () => {
+const HomePage = () => {
   const getContacts = async () => {
     const res = await BooksAPI.getAll();
     console.log(res);
@@ -112,4 +112,4 @@ const Books = () => {
   );
 };
 
-export default Books;
+export default HomePage;
