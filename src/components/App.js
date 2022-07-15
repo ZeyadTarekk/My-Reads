@@ -1,11 +1,7 @@
 import "../css/App.css";
 import * as BooksAPI from "../utils/BooksAPI";
 
-import {
-  Route,
-  Routes,
-  BrowserRouter as Router,
-} from "react-router-dom";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { useState, useEffect } from "react";
 import HomePage from "./HomePage";
 import SearchPage from "./SearchPage";
@@ -15,7 +11,7 @@ function App() {
     const getAllBooks = async () => {
       const res = await BooksAPI.getAll();
       setAllBooks(res);
-      console.log(res);
+      console.log("all books", res);
     };
 
     getAllBooks();
@@ -24,17 +20,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <HomePage
-              currentlyReading={allBooks}
-              wantToRead={allBooks}
-              read={allBooks}
-            />
-          }
-        />
+        <Route exact path="/" element={<HomePage allBooks={allBooks} />} />
         <Route
           path="/search"
           element={

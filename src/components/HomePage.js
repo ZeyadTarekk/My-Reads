@@ -13,18 +13,20 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Currently Reading</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  {props.currentlyReading.map((book) => {
+                  {props.allBooks.map((book) => {
                     return (
-                      <li key={book.industryIdentifiers[0].identifier}>
-                        <Book
-                          width={128}
-                          height={193}
-                          backgroundImage={book.imageLinks.thumbnail}
-                          bookAuthor={book.authors}
-                          bookTitle={book.title}
-                          book={book}
-                        />
-                      </li>
+                      book.shelf === "currentlyReading" && (
+                        <li key={book.industryIdentifiers[0].identifier}>
+                          <Book
+                            width={128}
+                            height={193}
+                            backgroundImage={book.imageLinks.thumbnail}
+                            bookAuthor={book.authors}
+                            bookTitle={book.title}
+                            book={book}
+                          />
+                        </li>
+                      )
                     );
                   })}
                 </ol>
@@ -34,18 +36,20 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Want to Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  {props.wantToRead.map((book) => {
+                  {props.allBooks.map((book) => {
                     return (
-                      <li key={book.industryIdentifiers[0].identifier}>
-                        <Book
-                          width={128}
-                          height={193}
-                          backgroundImage={book.imageLinks.thumbnail}
-                          bookAuthor={book.authors}
-                          bookTitle={book.title}
-                          book={book}
-                        />
-                      </li>
+                      book.shelf === "wantToRead" && (
+                        <li key={book.industryIdentifiers[0].identifier}>
+                          <Book
+                            width={128}
+                            height={193}
+                            backgroundImage={book.imageLinks.thumbnail}
+                            bookAuthor={book.authors}
+                            bookTitle={book.title}
+                            book={book}
+                          />
+                        </li>
+                      )
                     );
                   })}
                 </ol>
@@ -55,18 +59,20 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  {props.read.map((book) => {
+                  {props.allBooks.map((book) => {
                     return (
-                      <li key={book.industryIdentifiers[0].identifier}>
-                        <Book
-                          width={128}
-                          height={193}
-                          backgroundImage={book.imageLinks.thumbnail}
-                          bookAuthor={book.authors}
-                          bookTitle={book.title}
-                          book={book}
-                        />
-                      </li>
+                      book.shelf === "read" && (
+                        <li key={book.industryIdentifiers[0].identifier}>
+                          <Book
+                            width={128}
+                            height={193}
+                            backgroundImage={book.imageLinks.thumbnail}
+                            bookAuthor={book.authors}
+                            bookTitle={book.title}
+                            book={book}
+                          />
+                        </li>
+                      )
                     );
                   })}
                 </ol>

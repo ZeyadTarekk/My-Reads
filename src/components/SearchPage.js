@@ -12,7 +12,6 @@ const SearchPage = (props) => {
         const res = await props.search(event.target.value);
         if (res.error === "empty query") setSearchBooks([]);
         else setSearchBooks(res);
-        console.log(res);
       }
     };
 
