@@ -1,4 +1,6 @@
-import Book from "./Book";
+import CurrentlyReading from "./CurrentlyReading";
+import WantToRead from "./WantToRead";
+import Read from "./Read";
 import { Link } from "react-router-dom";
 const HomePage = (props) => {
   return (
@@ -13,22 +15,7 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Currently Reading</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  {props.allBooks.map((book) => {
-                    return (
-                      book.shelf === "currentlyReading" && (
-                        <li key={book.industryIdentifiers[0].identifier}>
-                          <Book
-                            width={128}
-                            height={193}
-                            backgroundImage={book.imageLinks.thumbnail}
-                            bookAuthor={book.authors}
-                            bookTitle={book.title}
-                            book={book}
-                          />
-                        </li>
-                      )
-                    );
-                  })}
+                  <CurrentlyReading allBooks={props.allBooks} />
                 </ol>
               </div>
             </div>
@@ -36,22 +23,7 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Want to Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  {props.allBooks.map((book) => {
-                    return (
-                      book.shelf === "wantToRead" && (
-                        <li key={book.industryIdentifiers[0].identifier}>
-                          <Book
-                            width={128}
-                            height={193}
-                            backgroundImage={book.imageLinks.thumbnail}
-                            bookAuthor={book.authors}
-                            bookTitle={book.title}
-                            book={book}
-                          />
-                        </li>
-                      )
-                    );
-                  })}
+                  <WantToRead allBooks={props.allBooks} />
                 </ol>
               </div>
             </div>
@@ -59,22 +31,7 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  {props.allBooks.map((book) => {
-                    return (
-                      book.shelf === "read" && (
-                        <li key={book.industryIdentifiers[0].identifier}>
-                          <Book
-                            width={128}
-                            height={193}
-                            backgroundImage={book.imageLinks.thumbnail}
-                            bookAuthor={book.authors}
-                            bookTitle={book.title}
-                            book={book}
-                          />
-                        </li>
-                      )
-                    );
-                  })}
+                  <Read allBooks={props.allBooks} />
                 </ol>
               </div>
             </div>
