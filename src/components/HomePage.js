@@ -56,7 +56,6 @@ const HomePage = (props) => {
           <Link to="/search">Add a book</Link>
         </div>
       </div>
-      )
     </div>
   );
 };
