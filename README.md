@@ -83,25 +83,25 @@ npm run build
 ## 📷 Demo Screenshots <a name = "Screenshots"></a>
 
 <div align="center">
-<h2 align='center'>Home Page</h2>
+<h3 align='left'>Home Page</h3>
    <img src="screenshots/s1.png">
    <hr>
    <img src="screenshots/s2.png">
    <hr>
-<h2 align='center'>Showing the correct shelf  on Home Page</h2>
+<h3 align='left'>Showing the correct shelf  on Home Page</h3>
    <img  src="screenshots/s3.png"></a>
    <hr>
    <img  src="screenshots/s4.png"></a>
 <hr>
-<h2 align='center'>Search Page</h2>
+<h3 align='left'>Search Page</h3>
 <img src="screenshots/s5.png"></a>
 <hr>
-<h2 align='center'>Showing the correct shelf  on Search Page</h2>
+<h3 align='left'>Showing the correct shelf  on Search Page</h3>
 <img src="screenshots/s6.png"></a>
 <hr>
 <img src="screenshots/s7.png"></a>
 <hr>
-<h2 align='center'>Responsive Design</h2>
+<h3 align='left'>Responsive Design</h3>
 <img src="screenshots/s8.png"></a>
 <hr>
 <img src="screenshots/s9.png"></a>
