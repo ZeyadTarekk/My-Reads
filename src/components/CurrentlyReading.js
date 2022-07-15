@@ -12,6 +12,10 @@ const CurrentlyReading = (props) => {
             bookTitle={book.title}
             book={book}
             shelf="currentlyReading"
+            allBooks={props.allBooks}
+            loadPage={props.loadPage}
+            setAllBooks={props.setAllBooks}
+            setLoadPage={props.setLoadPage}
           />
         </li>
       )

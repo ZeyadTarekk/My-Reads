@@ -21,8 +21,10 @@ const SearchPage = (props) => {
   const includedAllBooks = (book) => {
     for (const item of props.allBooks) {
       if (
+        item.industryIdentifiers &&
+        book.industryIdentifiers &&
         item.industryIdentifiers[0].identifier ===
-        book.industryIdentifiers[0].identifier
+          book.industryIdentifiers[0].identifier
       )
         return [true, item.shelf];
     }
@@ -50,11 +52,18 @@ const SearchPage = (props) => {
             ? searchBooks.length !== 0
               ? searchBooks.map((book) => {
                   return (
-                    <li key={book.industryIdentifiers[0].identifier}>
+                    <li
+                      key={
+                        book.industryIdentifiers &&
+                        book.industryIdentifiers[0].identifier
+                      }
+                    >
                       <Book
                         width={128}
                         height={193}
-                        backgroundImage={book.imageLinks.thumbnail}
+                        backgroundImage={
+                          book.imageLinks && book.imageLinks.thumbnail
+                        }
                         bookAuthor={book.authors}
                         bookTitle={book.title}
                         book={book}
@@ -63,6 +72,10 @@ const SearchPage = (props) => {
                             ? includedAllBooks(book)[1]
                             : "none"
                         }
+                        allBooks={props.allBooks}
+                        loadPage={props.loadPage}
+                        setAllBooks={props.setAllBooks}
+                        setLoadPage={props.setLoadPage}
                       />
                     </li>
                   );

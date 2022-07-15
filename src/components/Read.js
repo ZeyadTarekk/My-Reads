@@ -12,6 +12,10 @@ const Read = (props) => {
             bookTitle={book.title}
             book={book}
             shelf="read"
+            allBooks={props.allBooks}
+            loadPage={props.loadPage}
+            setAllBooks={props.setAllBooks}
+            setLoadPage={props.setLoadPage}
           />
         </li>
       )

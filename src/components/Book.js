@@ -6,7 +6,10 @@ const Book = (props) => {
     const updateBooks = async () => {
       const res = await BooksAPI.update(props.book, event.target.value);
 
-      console.log(res);
+      props.setLoadPage(!props.loadPage);
+
+      console.log(props.book);
+      // console.log([...props.allBooks, props.book]);
     };
 
     updateBooks();

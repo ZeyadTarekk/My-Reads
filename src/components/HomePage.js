@@ -15,7 +15,12 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Currently Reading</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  <CurrentlyReading allBooks={props.allBooks} />
+                  <CurrentlyReading
+                    allBooks={props.allBooks}
+                    loadPage={props.loadPage}
+                    setAllBooks={props.setAllBooks}
+                    setLoadPage={props.setLoadPage}
+                  />
                 </ol>
               </div>
             </div>
@@ -23,7 +28,12 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Want to Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  <WantToRead allBooks={props.allBooks} />
+                  <WantToRead
+                    allBooks={props.allBooks}
+                    loadPage={props.loadPage}
+                    setAllBooks={props.setAllBooks}
+                    setLoadPage={props.setLoadPage}
+                  />
                 </ol>
               </div>
             </div>
@@ -31,7 +41,12 @@ const HomePage = (props) => {
               <h2 className="bookshelf-title">Read</h2>
               <div className="bookshelf-books">
                 <ol className="books-grid">
-                  <Read allBooks={props.allBooks} />
+                  <Read
+                    allBooks={props.allBooks}
+                    loadPage={props.loadPage}
+                    setAllBooks={props.setAllBooks}
+                    setLoadPage={props.setLoadPage}
+                  />
                 </ol>
               </div>
             </div>
