@@ -18,6 +18,17 @@ const SearchPage = (props) => {
     getSearchBooks();
   };
 
+  const includedAllBooks = (book) => {
+    for (const item of props.allBooks) {
+      if (
+        item.industryIdentifiers[0].identifier ===
+        book.industryIdentifiers[0].identifier
+      )
+        return [true, item.shelf];
+    }
+    return false;
+  };
+
   return (
     <div className="search-books">
       <div className="search-books-bar">
@@ -47,7 +58,11 @@ const SearchPage = (props) => {
                         bookAuthor={book.authors}
                         bookTitle={book.title}
                         book={book}
-                        shelf={props.allBooks.includes(book) ? book.shelf : "none"}
+                        shelf={
+                          includedAllBooks(book)[0]
+                            ? includedAllBooks(book)[1]
+                            : "none"
+                        }
                       />
                     </li>
                   );
