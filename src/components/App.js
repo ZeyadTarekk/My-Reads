@@ -23,9 +23,7 @@ function App() {
         <Route exact path="/" element={<HomePage allBooks={allBooks} />} />
         <Route
           path="/search"
-          element={
-            <SearchPage search={BooksAPI.search} currentlyReading={allBooks} />
-          }
+          element={<SearchPage search={BooksAPI.search} allBooks={allBooks} />}
         />
       </Routes>
     </Router>

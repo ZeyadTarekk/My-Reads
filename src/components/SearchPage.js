@@ -47,6 +47,7 @@ const SearchPage = (props) => {
                         bookAuthor={book.authors}
                         bookTitle={book.title}
                         book={book}
+                        shelf={props.allBooks.includes(book) ? book.shelf : "none"}
                       />
                     </li>
                   );

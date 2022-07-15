@@ -11,7 +11,7 @@ const Book = (props) => {
           }}
         ></div>
         <div className="book-shelf-changer">
-          <select>
+          <select defaultValue={props.shelf}>
             <option value="none" disabled>
               Move to...
             </option>
