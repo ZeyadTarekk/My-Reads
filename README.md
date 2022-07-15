@@ -22,6 +22,7 @@
 
 ## 📙 About <a name = "about"></a>
 
+- A bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read.
 - The main page shows three shelves for books.
 - Each book is shown on the correct shelf, along with its title and all of its authors.
 - Each bookshelf is a reusable component.
